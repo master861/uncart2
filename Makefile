@@ -26,7 +26,18 @@ INCLUDES	:=	include source source/fatfs source/gamecart
 #---------------------------------------------------------------------------------
 # THEME: if set to anything, name of the themes file folder inside resources
 #---------------------------------------------------------------------------------
-THEME	:=	
+THEME	:=
+#---------------------------------------------------------------------------------
+# Include AppInfo / define Loader
+#---------------------------------------------------------------------------------
+ifneq ($(BUILD),$(notdir $(CURDIR)))
+TOPDIR ?= $(CURDIR)
+else
+TOPDIR ?= $(CURDIR)/..
+endif
+
+include $(TOPDIR)/resources/AppInfo
+LOADER			:= brahma_loader
 
 #---------------------------------------------------------------------------------
 # options for code generation
