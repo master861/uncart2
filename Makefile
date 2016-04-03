@@ -37,7 +37,7 @@ TOPDIR ?= $(CURDIR)/..
 endif
 
 include $(TOPDIR)/resources/AppInfo
-LOADER			:= brahma_loader
+LOADER			:= BrahmaLoader
 
 #---------------------------------------------------------------------------------
 # options for code generation
